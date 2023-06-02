@@ -87,3 +87,36 @@ veritas
 $
 ```
 
+## pop_shell_arm
+
+- arch: arm
+- shellcode pos: 0x54
+- size: 160 bytes
+
+just pop a shell.
+
+test:
+
+```
+qemu-arm ./pop_shell_arm
+$ whoami
+veritas
+$
+```
+
+## pop_shell_aarch64
+
+- arch: aarch64
+- shellcode pos: 0x78
+- size: 196 bytes
+
+just pop a shell.
+
+test:
+
+```
+qemu-aarch64 ./pop_shell_aarch64
+$ whoami
+veritas
+$
+```
