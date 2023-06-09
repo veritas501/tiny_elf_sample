@@ -120,3 +120,24 @@ $ whoami
 veritas
 $
 ```
+
+## suid_shell_in_c
+
+- arch: x64
+
+shellcode written in C
+
+build:
+```
+make clean && CC=clang make
+```
+
+usage:
+```
+$ ./suid_shell
+#
+
+$ ./suid_shell "whoami && id"
+root
+uid=0(root) gid=0(root) groups=0(root),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(kvm),117(netdev),120(docker),1000(veritas)
+```
